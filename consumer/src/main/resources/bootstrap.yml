@@ -1,0 +1,11 @@
+spring:
+ application:
+   name: config-consumer
+ cloud:
+  config:
+    name: config-client    #  这里一定要写name，并且要和配置文件的前缀一样，否则会报   Could not resolve placeholder
+    uri: http://localhost:8009/
+    profile: dev
+    label: master
+server:
+  port: 8400
